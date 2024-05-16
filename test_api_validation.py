@@ -3,7 +3,7 @@ from app import app
 
 
 def test_register_with_valid_data():
-    """Tests successful user registration with valid data."""
+
     data = {'name': 'John Doe', 'email': 'john.doe@example.com', 'password': 'secret123'}
     with app.test_client() as client:
         response = client.post('/register', data=data)
@@ -12,7 +12,7 @@ def test_register_with_valid_data():
     assert response.location.endswith('/passed_reg.html') 
 
 def test_register_with_missing_data():
-    """Tests registration with missing data fields."""
+
     
     data = {'name': 'John Doe'}  
     with app.test_client() as client:
@@ -27,7 +27,7 @@ def test_register_with_missing_data():
     assert response.status_code == 400  
 
 def test_register_with_duplicate_email():
-    """Tests registration with an already existing email address."""
+
     data = {'name': 'John Doe', 'email': 'john.doe@example.com', 'password': 'secret123'}
     with app.test_client() as client:
         client.post('/register', data=data)

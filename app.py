@@ -40,9 +40,9 @@ def register():
 
         connection.commit()
 
-        # Redirect to the success page after successful registration
+        
         return render_template('/passed_reg.html')
-        return redirect('/passed_reg.html')  # Replace with actual success page route
+        return redirect('/passed_reg.html')  
 
 
     return render_template('index.html')

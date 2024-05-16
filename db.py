@@ -1,6 +1,6 @@
 import sqlite3
 
-DATABASE_PATH = 'user_db.db'  # Replace with your actual database path
+DATABASE_PATH = 'user_db.db' 
 
 class db:
   def connectdb():
